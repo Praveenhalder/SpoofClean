@@ -50,7 +50,7 @@ Grab the latest APK from the [Releases](../../releases) page.
 ## 🛠️ Build From Source
 
 ```bash
-git clone https://github.com/<your-username>/spoof-clean.git
+git clone https://github.com/Praveenhalder/SpoofClean.git
 cd spoof-clean
 ./gradlew assembleRelease
 ```

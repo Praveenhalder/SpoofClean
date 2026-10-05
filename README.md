@@ -17,6 +17,8 @@ Unlock full CPU & GPU performance in your games and apps with a single tap.
 - 🪶 **Super lite**: the entire app is only **26 KB**
 - 🔓 **Open source**: read the code, modify it, and add your own features
 
+<img width="1260" height="792" alt="IMG_20261005_231127" src="https://github.com/user-attachments/assets/4cc0151d-32d0-4ea9-96fe-ec78ecfdf7ba" />
+
 ---
 
 ## 🧠 How It Works

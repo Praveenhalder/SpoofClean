@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.antutu.ABenchMark'
+    compileSdk 34
+
+    defaultConfig {
+        // The applicationId IS the mechanism: it must stay exactly
+        // com.antutu.ABenchMark so Vivo/iQOO firmware treats the process
+        // as the AnTuTu benchmark and unlocks the performance whitelist.
+        // Do NOT add applicationIdSuffix to any build type.
+        applicationId "com.antutu.ABenchMark"
+        minSdk 26
+        targetSdk 34
+        versionCode 5
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore.jks")
+            storePassword "spoofclean123"
+            keyAlias "spoofclean"
+            keyPassword "spoofclean123"
+        }
+    }
+
+    buildTypes {
+        // Both build types sign with the SAME key so a debug install can be
+        // replaced by a release build without uninstalling.
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// Intentionally no dependencies: no AndroidX, no libraries, no network code.
